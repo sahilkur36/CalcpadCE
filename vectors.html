@@ -231,7 +231,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="new-vscode-extension.html" class="md-tabs__link">
+        <a href="new-selecting-calcpadce-deployment.html" class="md-tabs__link">
           
   
   
@@ -1547,6 +1547,34 @@
   
   
     <li class="md-nav__item">
+      <a href="new-selecting-calcpadce-deployment.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Selecting a CalcpadCE Deployment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="new-vscode-extension.html" class="md-nav__link">
         
   
@@ -1603,14 +1631,14 @@
   
   
     <li class="md-nav__item">
-      <a href="new-calcpad-panel-and-settings.html" class="md-nav__link">
+      <a href="new-calcpadce-editor.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    The CalcPad Panel & Settings
+    The CalcpadCE Editor
   
 
     
@@ -1631,14 +1659,70 @@
   
   
     <li class="md-nav__item">
-      <a href="new-pdf-export.html" class="md-nav__link">
+      <a href="new-calcpad-panel.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    PDF Export
+    The CalcpadCE Panel
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="new-settings.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Settings
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="new-exports.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exports
   
 
     
@@ -1715,14 +1799,70 @@
   
   
     <li class="md-nav__item">
-      <a href="new-table-of-contents.html" class="md-nav__link">
+      <a href="new-ui-mode.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Table of Contents
+    UI Mode
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="new-visibility-directives.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visibility Directives
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="new-metadata-comments.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Metadata Comments
   
 
     
@@ -1771,14 +1911,14 @@
   
   
     <li class="md-nav__item">
-      <a href="new-metadata-comments.html" class="md-nav__link">
+      <a href="migration-guide.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Metadata Comments
+    Migration Guide
   
 
     
@@ -3563,12 +3703,12 @@ For example:</p>
 <p>If an index value is less than 1 or greater than the vector length <strong>len</strong>(<span class="arithmatex">\(\vec{a}\)</span>), the program will return an error: Index out of range.
 You can use indexing to initialize vectors inside loops (block or inline). For that purpose, you must include the loop counter into the index.
 For example:</p>
-<div class="language-calcpad highlight"><pre><span></span><code><span class="nv">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">vector</span><span class="p">(</span><span class="m">6</span><span class="p">)</span><span class="c1">&#39;,&#39;</span><span class="nv">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">vector</span><span class="p">(</span><span class="m">6</span><span class="p">)</span>
-<span class="c1">&#39;Block loop</span>
+<div class="language-calcpad highlight"><pre><span></span><code><span class="nv">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">vector</span><span class="p">(</span><span class="m">6</span><span class="p">)</span><span class="c1">','</span><span class="nv">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">vector</span><span class="p">(</span><span class="m">6</span><span class="p">)</span>
+<span class="c1">'Block loop</span>
 <span class="k">#for</span><span class="w"> </span><span class="nv">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="nb">len</span><span class="p">(</span><span class="nv">a</span><span class="p">)</span>
 <span class="nv">a</span><span class="p">.</span><span class="nv">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">k</span><span class="o">^</span><span class="m">2</span>
 <span class="k">#loop</span>
-<span class="c1">&#39;Inline loop</span>
+<span class="c1">'Inline loop</span>
 <span class="nd">$Repeat</span><span class="p">{</span><span class="nv">b</span><span class="p">.</span><span class="nv">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">a</span><span class="p">.(</span><span class="nv">k</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="m">1</span><span class="p">)</span><span class="w"> </span><span class="p">@</span><span class="w"> </span><span class="nv">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="nb">len</span><span class="p">(</span><span class="nv">b</span><span class="p">)}</span>
 </code></pre></div>
 <p>The above code will produce the following two vectors:</p>
