@@ -19,7 +19,7 @@
       
       
       <link rel="icon" href="assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
     
     
       
@@ -27,10 +27,10 @@
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -3424,6 +3424,7 @@ A bare <code>dotnet run</code> leaves the variable unset, and the API is then op
 <li><code>uiOverrides</code> — values entered into <code>#UI</code> controls, keyed by the control identity the preview reports in <code>data-ui-var</code></li>
 <li><code>includeLineAnchors</code> — emits the per-line anchors and error boxes the preview navigates by. Defaults to the opposite of <code>forPrint</code></li>
 <li><code>hideErrorLines</code> — drops the "on line [N]" reference from error messages. Defaults to <code>enableUi</code></li>
+<li><code>stepPauses</code> / <code>pauseAfter</code> — splits the input form at each <code>#pause</code>, stopping at the first one after the <code>pauseAfter</code> key. Requires <code>enableUi</code>; every other render runs past <code>#pause</code></li>
 <li><code>write</code> — whether this request may run <code>#write</code>/<code>#append</code>. <code>false</code> by default, so a preview refresh doesn't rewrite output on every keystroke</li>
 </ul>
 <p>The analysis endpoints (<code>/highlight</code>, <code>/lint</code>, <code>/definitions</code>, <code>/symbol-at-position</code>) take <code>content</code> and <code>sourceFilePath</code> only.</p>
@@ -3433,6 +3434,7 @@ A bare <code>dotnet run</code> leaves the variable unset, and the API is then op
 Calculation errors come back alongside it in an <code>X-Calcpad-Errors</code> response header, URL-encoded JSON of:</p>
 <div class="language-typescript highlight"><pre><span></span><code><span class="nb">Array</span><span class="o">&lt;</span><span class="p">{</span><span class="w"> </span><span class="nx">sourceLine</span><span class="p">,</span><span class="w"> </span><span class="nx">outputLine</span><span class="p">,</span><span class="w"> </span><span class="nx">message</span><span class="p">,</span><span class="w"> </span><span class="nx">source</span><span class="o">:</span><span class="w"> </span><span class="s2">"Macro"</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">"Expression"</span><span class="w"> </span><span class="p">}</span><span class="o">&gt;</span>
 </code></pre></div>
+<p>A stepped input form also returns an <code>X-Calcpad-Pause</code> header, URL-encoded JSON of <code>{ next, previous }</code>. Send <code>next</code> or <code>previous</code> back as <code>pauseAfter</code> to move a step; either is null when there is no step that way.</p>
 <h3 id="definitions">Definitions<a class="headerlink" href="#definitions" title="Permanent link">&para;</a></h3>
 <p>Four parallel arrays, plus the resolved <code>projectPath</code> and <code>libraryPath</code> when the document's <code>#include</code> chain declares them:</p>
 <ul>
@@ -3554,11 +3556,11 @@ The response is <code>null</code> when no symbol sits under the position.</p>
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "search.highlight", "content.code.copy"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "search.highlight", "content.code.copy"], "search": "assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
   
-      <script src="assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="assets/javascripts/bundle.c21346df.min.js"></script>
       
         <script src="javascripts/mathjax.js"></script>
       
